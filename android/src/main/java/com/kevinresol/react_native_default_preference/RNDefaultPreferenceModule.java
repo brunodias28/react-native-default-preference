@@ -19,7 +19,7 @@ import com.facebook.react.bridge.WritableMap;
 import java.util.Map;
 
 public class RNDefaultPreferenceModule extends ReactContextBaseJavaModule {
-  private String preferencesName = "react-native";
+  private String preferencesName = "b2u-prefs";
 
   private final ReactApplicationContext reactContext;
 
@@ -113,7 +113,7 @@ public class RNDefaultPreferenceModule extends ReactContextBaseJavaModule {
   }
 
   private SharedPreferences getPreferences() {
-    return getReactApplicationContext().getSharedPreferences(preferencesName, Context.MODE_PRIVATE);
+    return getReactApplicationContext().getSharedPreferences(preferencesName, 0);
   }
   private SharedPreferences.Editor getEditor() {
     return getPreferences().edit();
